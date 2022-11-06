@@ -1,0 +1,526 @@
+<!DOCTYPE html>
+<html lang="en" class="bg-[#21212b]">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>RisiQuests</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/swiper@6.8.4/swiper-bundle.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
+      integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+
+    <style>
+      .progress-bar1 {
+        transition: 0.4s linear;
+      }
+
+      .progress-moved .progress-bar1 {
+        width: 80%;
+        background-color: #0ea5e9;
+        animation: progressAnimation1 2s;
+      }
+
+      @keyframes progressAnimation1 {
+        0% {
+          width: 5%;
+          background-color: #67e8f9;
+        }
+        100% {
+          width: 80%;
+          background-color: #0ea5e9;
+        }
+      }
+
+      .progress-bar2 {
+        transition: 0.4s linear;
+      }
+
+      .progress-moved .progress-bar2 {
+        width: 42%;
+        background-color: #be123c;
+        animation: progressAnimation2 2s;
+      }
+
+      @keyframes progressAnimation2 {
+        0% {
+          width: 5%;
+          background-color: #fda4af;
+        }
+        100% {
+          width: 42%;
+          background-color: #be123c;
+        }
+      }
+
+      .progress-bar3 {
+        transition: 0.4s linear;
+      }
+
+      .progress-moved .progress-bar3 {
+        width: 36%;
+        background-color: #1d4ed8;
+        animation: progressAnimation3 2s;
+      }
+
+      @keyframes progressAnimation3 {
+        0% {
+          width: 5%;
+          background-color: #93c5fd;
+        }
+        100% {
+          width: 36%;
+          background-color: #1d4ed8;
+        }
+      }
+
+      .progress-bar4 {
+        transition: 0.4s linear;
+      }
+
+      .progress-moved .progress-bar4 {
+        width: 50%;
+        background-color: #ea580c;
+        animation: progressAnimation4 2s;
+      }
+
+      @keyframes progressAnimation4 {
+        0% {
+          width: 5%;
+          background-color: #fdba74;
+        }
+        100% {
+          width: 50%;
+          background-color: #ea580c;
+        }
+      }
+
+      .progress-bar5 {
+        transition: 0.4s linear;
+      }
+
+      .progress-moved .progress-bar5 {
+        width: 14%;
+        background-color: #7e22ce;
+        animation: progressAnimation5 2s;
+      }
+
+      @keyframes progressAnimation5 {
+        0% {
+          width: 5%;
+          background-color: #c4b5fd;
+        }
+        100% {
+          width: 14%;
+          background-color: #7e22ce;
+        }
+      }
+
+      .progress-bar6 {
+        transition: 0.4s linear;
+      }
+
+      .progress-moved .progress-bar6 {
+        width: 30%;
+        background-color: #4d7c0f;
+        animation: progressAnimation6 2s;
+      }
+
+      @keyframes progressAnimation6 {
+        0% {
+          width: 5%;
+          background-color: #bef264;
+        }
+        100% {
+          width: 30%;
+          background-color: #4d7c0f;
+        }
+      }
+    </style>
+  </head>
+  <body class="bg-[#21212b] text-white">
+    <header
+      class="w-screen fixed -top-1 flex flex-row justify-between px-8 2xl:px-44 py-4 bg-[#21212b] shadow-lg"
+    >
+      <button id="toggle" class="text-white text-xl">
+        <i class="fa-solid fa-bars"></i>
+      </button>
+      <div class="space-x-8">
+        <button><i class="fa-solid fa-magnifying-glass"></i></button>
+        <button><i class="fa-solid fa-bell"></i></button>
+      </div>
+    </header>
+    <nav
+      id="nav"
+      class="fixed z-50 lg:w-1/4 top-0 mt-14 bottom-0 -left-full transition-all bg-[#21212b] bg-opacity-80 backdrop-blur text-gray-300 text-sm shadow-xl"
+    >
+      <ul class="pt-6">
+        <li
+          class="pr-16 pl-8 2xl:pl-44 py-1 mt-2 border-r-4 border-blue-500 hover:border-blue-500 hover:text-white"
+        >
+          <a href="#"><i class="fa-solid fa-star"></i>&nbsp &nbsp Quêtes</a>
+        </li>
+        <li
+          class="pr-16 pl-8 2xl:pl-44 py-1 mt-2 border-r-4 border-transparent hover:border-blue-500 hover:text-white"
+        >
+          <a href="#"
+            ><i class="fa-solid fa-folder"></i>&nbsp &nbsp Catégories</a
+          >
+        </li>
+        <li
+          class="pr-16 pl-8 2xl:pl-44 py-1 mt-2 border-r-4 border-transparent hover:border-blue-500 hover:text-white"
+        >
+          <a href="#"
+            ><i class="fa-solid fa-chart-simple"></i>&nbsp &nbsp Statistiques</a
+          >
+        </li>
+        <li
+          class="pr-16 pl-8 2xl:pl-44 py-1 mt-2 border-r-4 border-transparent hover:border-blue-500 hover:text-white"
+        >
+          <a href="https://discord.gg/rq3PrjKSCu" target="_blank"
+            ><i class="fa-brands fa-discord"></i>&nbsp &nbsp Discord</a
+          >
+        </li>
+      </ul>
+    </nav>
+
+    <section class="mt-16 py-4 lg:w-5/6 mx-auto">
+      <h2 class="px-8 text-3xl font-bold">Bonjour, Célestin !</h2>
+      <h5 class="px-8 text-gray-300 my-4">Catégories</h5>
+      <div
+        x-data="{swiper: null}"
+        x-init="swiper = new Swiper($refs.container, {
+      loop: true,
+      slidesPerView: 1.3,
+      spaceBetween: 0,
+  
+      breakpoints: {
+        640: {
+          slidesPerView: 2.3,
+          spaceBetween: 0,
+        },
+        768: {
+          slidesPerView: 3.3,
+          spaceBetween: 0,
+        },
+        1024: {
+          slidesPerView: 4.3,
+          spaceBetween: 0,
+        },
+      },
+    })"
+        class="relative w-full mx-2 flex flex-row"
+      >
+        <div
+          class="absolute inset-y-0 left-0 z-10 flex items-center text-black"
+        >
+          <button
+            @click="swiper.slidePrev()"
+            class="bg-white flex justify-center items-center text-sm w-8 h-8 rounded-full shadow focus:outline-none bg-opacity-20 backdrop-blur"
+          >
+            <i class="fa-solid fa-chevron-left"></i>
+          </button>
+        </div>
+
+        <div class="swiper-container" x-ref="container">
+          <div class="swiper-wrapper">
+            <!-- Slides -->
+            <div class="swiper-slide p-1">
+              <div
+                class="flex flex-col justify-center gap-4 rounded overflow-hidden h-44 bg-gray-900 shadow-inner p-8"
+              >
+                <div>
+                  <p class="text-gray-400 text-sm">40 Quêtes</p>
+                  <a href=""
+                    ><h6 class="text-xl font-black">Compétences Sociales</h6></a
+                  >
+                </div>
+                <div class="">
+                  <p class="text-gray-400 text-sm font-bold m-2">80%</p>
+                  <div class="bg-gray-700 rounded progress-moved">
+                    <div
+                      class="progress-bar1 h-1.5 rounded-xl shadow-inner shadow-blue-400"
+                    ></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="swiper-slide p-1">
+              <div
+                class="flex flex-col justify-center gap-4 rounded overflow-hidden h-44 bg-gray-900 shadow-inner p-8"
+              >
+                <div>
+                  <p class="text-gray-400 text-sm">57 Quêtes</p>
+                  <a href=""
+                    ><h6 class="text-xl font-black">Entrepreneuriat</h6></a
+                  >
+                </div>
+                <div class="">
+                  <p class="text-gray-400 text-sm font-bold m-2">42%</p>
+                  <div class="bg-gray-700 rounded progress-moved">
+                    <div
+                      class="progress-bar2 h-1.5 rounded-xl shadow-inner shadow-red-500"
+                    ></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="swiper-slide p-1">
+              <div
+                class="flex flex-col justify-center gap-4 rounded overflow-hidden h-44 bg-gray-900 shadow-inner p-8"
+              >
+                <div>
+                  <p class="text-gray-400 text-sm">62 Quêtes</p>
+                  <a href=""><h6 class="text-xl font-black">Sport</h6></a>
+                </div>
+                <div class="">
+                  <p class="text-gray-400 text-sm font-bold m-2">36%</p>
+                  <div class="bg-gray-700 rounded progress-moved">
+                    <div
+                      class="progress-bar3 h-1.5 rounded-xl shadow-inner shadow-indigo-600"
+                    ></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="swiper-slide p-1">
+              <div
+                class="flex flex-col justify-center gap-4 rounded overflow-hidden h-44 bg-gray-900 shadow-inner p-8"
+              >
+                <div>
+                  <p class="text-gray-400 text-sm">16 Quêtes</p>
+                  <a href=""><h6 class="text-xl font-black">18-25</h6></a>
+                </div>
+                <div class="">
+                  <p class="text-gray-400 text-sm font-bold m-2">50%</p>
+                  <div class="bg-gray-700 rounded progress-moved">
+                    <div
+                      class="progress-bar4 h-1.5 rounded-xl shadow-inner shadow-orange-500"
+                    ></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="swiper-slide p-1">
+              <div
+                class="flex flex-col justify-center gap-4 rounded overflow-hidden h-44 bg-gray-900 shadow-inner p-8"
+              >
+                <div>
+                  <p class="text-gray-400 text-sm">27 Quêtes</p>
+                  <a href=""><h6 class="text-xl font-black">Abstinence</h6></a>
+                </div>
+                <div class="">
+                  <p class="text-gray-400 text-sm font-bold m-2">14%</p>
+                  <div class="bg-gray-700 rounded progress-moved">
+                    <div
+                      class="progress-bar5 h-1.5 rounded-xl shadow-inner shadow-purple-500"
+                    ></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="swiper-slide p-1">
+              <div
+                class="flex flex-col justify-center gap-4 rounded overflow-hidden h-44 bg-gray-900 shadow-inner p-8"
+              >
+                <div>
+                  <p class="text-gray-400 text-sm">115 Quêtes</p>
+                  <a href=""><h6 class="text-xl font-black">Autres</h6></a>
+                </div>
+                <div class="">
+                  <p class="text-gray-400 text-sm font-bold m-2">30%</p>
+                  <div class="bg-gray-700 rounded progress-moved">
+                    <div
+                      class="progress-bar6 h-1.5 rounded-xl shadow-inner shadow-green-500"
+                    ></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div
+            class="absolute inset-y-0 right-2 z-10 flex items-center text-black"
+          >
+            <button
+              @click="swiper.slideNext()"
+              class="bg-white flex justify-center items-center text-sm w-8 h-8 rounded-full shadow focus:outline-none bg-opacity-20 backdrop-blur"
+            >
+              <i class="fa-solid fa-chevron-right"></i>
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="py-4 lg:w-5/6 mx-auto">
+      <h5 class="px-8 text-gray-300 my-4">Quêtes en cours</h5>
+      <div>
+        <ul>
+          <li
+            class="mx-4 px-4 h-16 bg-gray-900 mt-2 rounded-lg overflow-hidden truncate flex flex-row items-center justify-between"
+          >
+            <div class="flex flex-row space-x-4">
+              <div
+                class="h-6 w-6 border-4 border-blue-300 hover:bg-blue-300 transform duration-150 rounded-full"
+              ></div>
+              <p>Trouver une copine</p>
+            </div>
+            <p class="text-sm text-gray-400">+150 xp</p>
+          </li>
+          <li
+            class="mx-4 px-4 h-16 bg-gray-900 mt-2 rounded-lg overflow-hidden truncate flex flex-row items-center justify-between"
+          >
+            <div class="flex flex-row space-x-4">
+              <div class="h-6 w-6 border-4 border-red-500 rounded-full"></div>
+              <p>Créer une SARL</p>
+            </div>
+            <p class="text-sm text-gray-400">+150 xp</p>
+          </li>
+          <li
+            class="mx-4 px-4 h-16 bg-gray-900 mt-2 rounded-lg overflow-hidden truncate flex flex-row items-center justify-between"
+          >
+            <div class="flex flex-row space-x-4">
+              <div class="h-6 w-6 border-4 border-red-500 rounded-full"></div>
+              <p>Faire un business plan</p>
+            </div>
+            <p class="text-sm text-gray-400">+150 xp</p>
+          </li>
+          <li
+            class="mx-4 px-4 h-16 bg-gray-900 mt-2 rounded-lg overflow-hidden truncate flex flex-row items-center justify-between"
+          >
+            <div class="flex flex-row space-x-4">
+              <div class="h-6 w-6 border-4 border-blue-500 rounded-full"></div>
+              <p class="max-w-2/3 truncate bg-red-500">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Nobis
+                nisi ducimus doloribus.
+              </p>
+            </div>
+            <p class="text-sm text-gray-400">+150 xp</p>
+          </li>
+          <li
+            class="mx-4 px-4 h-16 bg-gray-900 mt-2 rounded-lg overflow-hidden truncate flex flex-row items-center justify-between"
+          >
+            <div class="flex flex-row space-x-4">
+              <div class="h-6 w-6 border-4 border-blue-500 rounded-full"></div>
+              <p>Soulever son poids au développé couché</p>
+            </div>
+            <p class="text-sm text-gray-400">+150 xp</p>
+          </li>
+          <li
+            class="mx-4 px-4 h-16 bg-gray-900 mt-2 rounded-lg overflow-hidden truncate flex flex-row items-center justify-between"
+          >
+            <div class="flex flex-row space-x-4">
+              <div
+                class="h-6 w-6 border-4 border-orange-500 rounded-full"
+              ></div>
+              <p>Sucer un pote pour dépanner</p>
+            </div>
+            <p class="text-sm text-gray-400">+150 xp</p>
+          </li>
+          <li
+            class="mx-4 px-4 h-16 bg-gray-900 mt-2 rounded-lg overflow-hidden truncate flex flex-row items-center justify-between"
+          >
+            <div class="flex flex-row space-x-4">
+              <div
+                class="h-6 w-6 border-4 border-orange-500 rounded-full"
+              ></div>
+              <p>Lorem Ipsum</p>
+            </div>
+            <p class="text-sm text-gray-400">+150 xp</p>
+          </li>
+          <li
+            class="mx-4 px-4 h-16 bg-gray-900 mt-2 rounded-lg overflow-hidden truncate flex flex-row items-center justify-between"
+          >
+            <div class="flex flex-row space-x-4">
+              <div
+                class="h-6 w-6 border-4 border-purple-500 rounded-full"
+              ></div>
+              <p>Lorem Ipsum</p>
+            </div>
+            <p class="text-sm text-gray-400">+150 xp</p>
+          </li>
+          <li
+            class="mx-4 px-4 h-16 bg-gray-900 mt-2 rounded-lg overflow-hidden truncate flex flex-row items-center justify-between"
+          >
+            <div class="flex flex-row space-x-4">
+              <div
+                class="h-6 w-6 border-4 border-purple-500 rounded-full"
+              ></div>
+              <p>Lorem Ipsum</p>
+            </div>
+            <p class="text-sm text-gray-400">+150 xp</p>
+          </li>
+          <li
+            class="mx-4 px-4 h-16 bg-gray-900 mt-2 rounded-lg overflow-hidden truncate flex flex-row items-center justify-between"
+          >
+            <div class="flex flex-row space-x-4">
+              <div
+                class="h-6 w-6 border-4 border-purple-500 rounded-full"
+              ></div>
+              <p>Lorem Ipsum</p>
+            </div>
+            <p class="text-sm text-gray-400">+150 xp</p>
+          </li>
+          <li
+            class="mx-4 px-4 h-16 bg-gray-900 mt-2 rounded-lg overflow-hidden truncate flex flex-row items-center justify-between"
+          >
+            <div class="flex flex-row space-x-4">
+              <div class="h-6 w-6 border-4 border-green-500 rounded-full"></div>
+              <p>Lorem Ipsum</p>
+            </div>
+            <p class="text-sm text-gray-400">+150 xp</p>
+          </li>
+          <li
+            class="mx-4 px-4 h-16 bg-gray-900 mt-2 rounded-lg overflow-hidden truncate flex flex-row items-center justify-between"
+          >
+            <div class="flex flex-row space-x-4">
+              <div class="h-6 w-6 border-4 border-green-500 rounded-full"></div>
+              <p>Lorem Ipsum</p>
+            </div>
+            <p class="text-sm text-gray-400">+150 xp</p>
+          </li>
+        </ul>
+      </div>
+    </section>
+  </body>
+
+  <button
+    data-bs-toggle="tooltip"
+    title="Hi! I'm tooltip"
+    class="fixed flex justify-center items-center hover:bg-blue-500 h-10 w-10 bottom-8 right-8 text-xl bg-blue-400 rounded-full text-center transform duration-150"
+  >
+    <i class="fa-solid fa-plus"></i>
+  </button>
+
+  <script src="https://unpkg.com/swiper@6.8.4/swiper-bundle.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.x.x/dist/alpine.min.js"></script>
+  <script>
+    var swiper = new Swiper(".mySwiper", {
+      direction: "vertical",
+      pagination: {
+        el: ".swiper-pagination",
+        clickable: true,
+      },
+    });
+  </script>
+  <script>
+    document.getElementById("toggle").addEventListener("click", function () {
+      document.getElementById("nav").classList.toggle("-left-full");
+      document.getElementById("nav").classList.toggle("left-0");
+    });
+  </script>
+</html>
